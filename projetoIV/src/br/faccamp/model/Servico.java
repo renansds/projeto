@@ -1,5 +1,11 @@
 package br.faccamp.model;
 
-public class Servico {
+import javax.persistence.Entity;
 
+@Entity
+public class Servico {
+	
+	private Integer id;
+	private String codigoProduto ;
+	
 }
