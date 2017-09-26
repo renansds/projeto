@@ -1,11 +1,23 @@
 package br.faccamp.model;
 
+import java.util.Date;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Servico {
-	
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
-	private String codigoProduto ;
+	
+	@Column(name="codigo_produto", nullable =false , unique=true, columnDefinition = "varchar(20)")
+	private String codigoProduto;
+	private String descricao; 
+	private double valor; 
+	private Date data_hora;
 	
 }
