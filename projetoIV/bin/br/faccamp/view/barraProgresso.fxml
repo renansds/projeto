@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="225.0" prefWidth="417.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.view.BarraProgressoController">
+   <children>
+      <ProgressBar fx:id="barra" layoutX="33.0" layoutY="37.0" prefWidth="200.0">
+         <cursor>
+            <Cursor fx:constant="WAIT" />
+         </cursor>
+      </ProgressBar>
+      <ProgressIndicator fx:id="indicador" layoutX="324.0" layoutY="35.0" />
+      <Label fx:id="status" layoutX="133.0" layoutY="38.0" prefHeight="17.0" prefWidth="36.0" />
+      <Button fx:id="btnCarrega" layoutX="107.0" layoutY="130.0" mnemonicParsing="false" text="Carrega" />
+   </children>
+</AnchorPane>

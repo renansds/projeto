@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="258.0" prefWidth="349.0" styleClass="pane" stylesheets="@../../../../../../Desktop/ProjetoIV/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.view.LoginController">
+   <children>
+      <TextField fx:id="txLogin" alignment="CENTER" layoutX="85.0" layoutY="95.0" maxHeight="28.0" maxWidth="180.0" minHeight="28.0" minWidth="180.0" prefHeight="28.0" prefWidth="200.0" promptText="Digite seu login...">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font></TextField>
+      <PasswordField fx:id="txSenha" alignment="CENTER" layoutX="85.0" layoutY="131.0" maxHeight="28.0" maxWidth="180.0" minHeight="28.0" minWidth="180.0" prefHeight="28.0" prefWidth="180.0" promptText="Digite sua senha...">
+         <font>
+            <Font name="Calibri" size="15.0" />
+         </font></PasswordField>
+      <Button fx:id="btEntrar" layoutX="85.0" layoutY="176.0" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="btEntrar" stylesheets="@../../../../../../Desktop/ProjetoIV/login.css" text="Entrar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+      <Button fx:id="btSair" layoutX="185.0" layoutY="176.0" maxHeight="30.0" maxWidth="80.0" minHeight="30.0" minWidth="80.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="80.0" styleClass="btSair" stylesheets="file:/C:/Users/Lenovo-i310/eclipse-workspace/projetoIV/src/br/faccamp/view/login.css" text="Sair">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets></Button>
+      <Label alignment="CENTER" layoutX="74.0" layoutY="26.0" prefHeight="49.0" prefWidth="223.0" text="Bem Vindo !" textAlignment="CENTER">
+         <font>
+            <Font name="Calibri" size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
