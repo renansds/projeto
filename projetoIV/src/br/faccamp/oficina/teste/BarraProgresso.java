@@ -1,4 +1,4 @@
-package br.faccamp.view;
+package br.faccamp.oficina.teste;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;

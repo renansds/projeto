@@ -1,8 +1,12 @@
-package br.faccamp.view;
+package br.faccamp.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import javax.sound.midi.Soundbank;
+import javax.swing.JOptionPane;
+
+import br.faccamp.oficina.util.DaoUsuario;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -25,7 +29,14 @@ public class LoginController implements Initializable {
 		btEntrar.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
-				System.out.println("Implementar logica para conectar ao banco ! ");
+				DaoUsuario db = new DaoUsuario();
+				boolean ok = db.loginUser(txLogin.getText(), txSenha.getText());
+				
+				if (ok) {
+					JOptionPane.showMessageDialog(null, "Usuario logado!");
+				} else {
+					JOptionPane.showMessageDialog(null, "Usuario e senha invalidos");
+				}
 			}
 		});
 		btSair.setOnAction(new EventHandler<ActionEvent>() {

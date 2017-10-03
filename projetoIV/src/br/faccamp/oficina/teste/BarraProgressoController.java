@@ -1,30 +1,43 @@
-package br.faccamp.view;
+package br.faccamp.oficina.teste;
 
-import com.sun.corba.se.impl.encoding.CodeSetConversion.BTCConverter;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-import javafx.application.Application;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
-import javafx.geometry.Pos;
-import javafx.scene.Scene;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
+import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
 
-public class JavaFXApplication1 extends Application {
-  
-    @Override
-    public void start(Stage primaryStage) {
-        ProgressBar barra = new ProgressBar();
-        Button btn = new Button("Carregar");
-        btn.setLayoutX(500);
-        btn.setLayoutY(9999);
-        Label status = new Label("Novo");
+public class BarraProgressoController implements Initializable {
+	@FXML
+	private Label status;
+	@FXML
+	private ProgressBar barra;
 
-        btn.setOnAction((ActionEvent acao) -> {
+	@FXML
+	private ProgressIndicator indicador;
+
+	@FXML
+	private Button btnCarrega;
+
+	@Override
+	public void initialize(URL url, ResourceBundle bundle) {
+		btnCarrega.setOnAction(new EventHandler<ActionEvent>() {
+			@Override
+			public void handle(ActionEvent event) {
+				System.out.println("Implementar logica para conectar ao banco ! ");
+			}
+		});
+		
+		btnCarrega.setOnAction((ActionEvent acao) -> {
             //criando um classe anônima Service que cria uma Task que também é anônima
             //a classe Service serve para gerenciar threads em JavaFX 
             Service<Void> servico = new Service() {
@@ -38,7 +51,6 @@ public class JavaFXApplication1 extends Application {
                             //para transmitir uma mensagem,
                             //e a progressProperty, que serve para mandar valores númericos a uma
                             //ProgressBar ou ProgressIndicator
-                            updateMessage("Carregando...");
                             Thread.sleep(300);
                             updateProgress(1, 10);
                             for (int i = 0; i <= 10; i++) {
@@ -46,7 +58,7 @@ public class JavaFXApplication1 extends Application {
                                 updateMessage(i * 10  + "%");
                                 Thread.sleep(300);
                             }
-                            updateMessage("Terminou");
+                            
                             return null;
                         }
                     };
@@ -59,28 +71,6 @@ public class JavaFXApplication1 extends Application {
             servico.restart();
         });
 
-        //criando um ui para exemplificar o uso do ProgressBar
-        VBox root = new VBox();
-        root.setAlignment(Pos.CENTER);
-        root.getChildren().addAll(status, btn, barra);
-        
-        Scene scene = new Scene(root, 150, 150);
-
-        primaryStage.setTitle("Progress Bar!");
-        primaryStage.setScene(scene);
-        barra.setLayoutX(90);
-        barra.setLayoutY(50);
-        primaryStage.show();
-     
-        initLayout();
-    }
-
-    private void initLayout() {
-    	
-		
 	}
 
-	public static void main(String[] args) {
-        launch(args);
-    }
 }

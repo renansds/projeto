@@ -1,4 +1,4 @@
-package br.faccamp.view;
+package br.faccamp.model;
 
 public class TelaComSwing {
 

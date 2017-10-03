@@ -3,6 +3,7 @@ package br.faccamp.oficina.util;
 import java.util.GregorianCalendar;
 import javax.persistence.EntityManager;
 import br.faccamp.model.Cliente;
+import br.faccamp.model.Login;
 import br.faccamp.model.TipoCliente;
 
 public class PopulaCliente {
@@ -45,6 +46,14 @@ public class PopulaCliente {
 		c5.setEmail("William@email.com.br");
 		c5.setDataNascimento(new GregorianCalendar(1996, 07, 21).getTime());
 		c5.setTipo(TipoCliente.pf);
+
+		Login login = new Login();
+		login.setNome("Renan");
+		login.setSenha("senha");
+		
+		Login admin = new Login();
+		login.setNome("Admin");
+		login.setSenha("admin");
 		
 		//PERSISTINDO CLIENTES 
 		em.persist(c1);
@@ -52,7 +61,7 @@ public class PopulaCliente {
 		em.persist(c3);
 		em.persist(c4);
 		em.persist(c5);
-		
+		em.persist(login);
 		// FAZENDO O COMMIT 
 		em.getTransaction().commit(); 
 		em.close();
