@@ -4,21 +4,25 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
 import javafx.stage.Stage;
 
-public class Login extends Application {
+public class OficinaMain extends Application {
+
+	private static Stage stage;
+
+	public static Stage getStage() {
+		return stage;
+	}
+	
 	@Override
 	public void start(Stage stage) throws Exception {
 		Parent parent = FXMLLoader.
-				load(getClass().getResource("login.fxml"));
+				load(getClass().getResource("telaprincipal.fxml"));
 				Scene scene = new Scene(parent);
 				scene.getStylesheets();
-				stage.setResizable(false);
-				
+				stage.setFullScreen(true);
 				stage.setScene(scene);
-				stage.setTitle("Tela de Login");
+				stage.setTitle("Oficina Mecânica");
 				stage.show();
 				
 	}
@@ -26,5 +30,4 @@ public class Login extends Application {
 	public static void main(String[] args) {
 		launch(args);
 	}
-
 }

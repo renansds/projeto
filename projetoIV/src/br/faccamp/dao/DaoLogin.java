@@ -1,13 +1,14 @@
-package br.faccamp.oficina.util;
+package br.faccamp.dao;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import br.faccamp.model.Login;
+import br.faccamp.oficina.util.JPAUtil;
 
 
-public class DaoUsuario {
+public class DaoLogin {
 
 	public boolean loginUser(String nome, String senha) {
 		EntityManager em = new JPAUtil().getEntityManager();

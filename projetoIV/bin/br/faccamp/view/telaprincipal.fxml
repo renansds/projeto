@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="600" minWidth="800" prefHeight="600" prefWidth="800" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.controller.OficinaMainController">
+   <children>
+      <Pane minHeight="768.0" minWidth="1024.0" prefHeight="768.0" prefWidth="1024.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <MenuBar prefHeight="25.0" prefWidth="796.0">
+              <menus>
+                <Menu mnemonicParsing="false" text="Cadastros">
+                  <items>
+                        <MenuItem mnemonicParsing="false" text="Cliente" />
+                        <MenuItem mnemonicParsing="false" text="Funcionários" />
+                        <MenuItem mnemonicParsing="false" text="Produto" />
+                    <MenuItem mnemonicParsing="false" text="Veículos" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Serviços">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Orçamento" />
+                        <MenuItem mnemonicParsing="false" text="Ordem Serviço" />
+                        <MenuItem mnemonicParsing="false" text="Imprimir" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Ajuda">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Sobre" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="Sair">
+                     <items>
+                        <MenuItem fx:id="sairSistema" mnemonicParsing="false" text="Sair do sistemas" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+            <Button layoutX="58.0" layoutY="83.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="99.0" text="Clientes" />
+            <Button layoutX="171.0" layoutY="83.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="99.0" text="Veículos" />
+            <Button layoutX="281.0" layoutY="83.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="99.0" text="O.S" />
+            <Button layoutX="397.0" layoutY="83.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="99.0" text="Relatórios" />
+            <Button layoutX="58.0" layoutY="200.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="99.0" text="Configuração" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
