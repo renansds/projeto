@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane>
+         <left>
+            <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="335.0" prefWidth="385.0" vgap="10.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField prefHeight="31.0" prefWidth="321.0" promptText="Nome">
+                     <TilePane.margin>
+                        <Insets />
+                     </TilePane.margin>
+                  </TextField>
+                  <TextField prefHeight="31.0" prefWidth="175.0" promptText="CPF" />
+                  <TextField prefHeight="31.0" prefWidth="175.0" promptText="Digite seu Login" />
+                  <PasswordField prefHeight="31.0" prefWidth="104.0" promptText="Digite sua Senha" />
+               </children>
+               <BorderPane.margin>
+                  <Insets left="10.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets top="-60.0" />
+               </padding>
+            </TilePane>
+         </left>
+         <right>
+            <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="343.0" prefWidth="173.0" vgap="20.0" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <children>
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Novo" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Alterar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Excluir" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Cancelar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+               </children>
+               <padding>
+                  <Insets top="-60.0" />
+               </padding>
+            </TilePane>
+         </right>
+         <top>
+            <Label text="Cadastro de Usuário" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</StackPane>

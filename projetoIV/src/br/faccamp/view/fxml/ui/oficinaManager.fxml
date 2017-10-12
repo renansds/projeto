@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<StackPane minHeight="600.0" minWidth="800.0" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.controller.OficinaMainController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="painel-principal" stylesheets="@oficinaManager.css">
+         <top>
+            <MenuBar BorderPane.alignment="CENTER">
+              <menus>
+                <Menu mnemonicParsing="false" text="Cadastros">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Cliente" />
+                        <MenuItem mnemonicParsing="false" text="Veículo" />
+                        <MenuItem mnemonicParsing="false" text="Funcionário" />
+                        <MenuItem mnemonicParsing="false" text="Produto" />
+                        <MenuItem mnemonicParsing="false" text="Serviços" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Clientes">
+                  <items>
+                    <MenuItem mnemonicParsing="false" text="Consultar" />
+                        <MenuItem mnemonicParsing="false" text="Relatório de Cliente" />
+                        <MenuItem mnemonicParsing="false" text="Cartão Fidelidade" />
+                  </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Veículos">
+                  <items>
+                    <MenuItem mnemonicParsing="false" />
+                  </items>
+                </Menu>
+                  <Menu mnemonicParsing="false" text="O.S">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Aberto" />
+                        <MenuItem mnemonicParsing="false" text="Pendente" />
+                        <MenuItem mnemonicParsing="false" text="Fechado" />
+                        <MenuItem mnemonicParsing="false" text="Reprovado" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Configurações">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Efetuar Backup" />
+                        <MenuItem mnemonicParsing="false" text="Restaurar Backup" />
+                        <MenuItem mnemonicParsing="false" text="Geral" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Ajuda">
+                     <items>
+                        <MenuItem mnemonicParsing="false" text="Sobre" />
+                     </items>
+                  </Menu>
+                  <Menu mnemonicParsing="false" text="Sair">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#onSair" text="Sair do Sistema" />
+                     </items>
+                  </Menu>
+              </menus>
+            </MenuBar>
+         </top>
+         <bottom>
+            <BorderPane prefHeight="29.0" prefWidth="600.0" style="-fx-background-color: #d8d8d8;" BorderPane.alignment="CENTER">
+               <left>
+                  <HBox prefHeight="38.0" prefWidth="173.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label prefHeight="34.0" prefWidth="201.0" text="C:\Program Files\oficinaGestor">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </HBox>
+               </left>
+               <right>
+                  <HBox prefHeight="23.0" prefWidth="365.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <ProgressBar nodeOrientation="LEFT_TO_RIGHT" prefHeight="38.0" prefWidth="170.0">
+                           <padding>
+                              <Insets bottom="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <cursor>
+                              <Cursor fx:constant="NONE" />
+                           </cursor>
+                        </ProgressBar>
+                        <Separator orientation="VERTICAL" prefHeight="200.0">
+                           <HBox.margin>
+                              <Insets top="10.0" />
+                           </HBox.margin>
+                        </Separator>
+                        <Label text="usuariologado@email.com.br">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </HBox>
+               </right>
+            </BorderPane>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>
