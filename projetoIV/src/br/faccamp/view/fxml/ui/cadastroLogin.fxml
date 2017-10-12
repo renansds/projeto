@@ -6,21 +6,20 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="335.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.controller.CadastroLoginController">
    <children>
       <BorderPane>
          <left>
             <TilePane alignment="CENTER" orientation="VERTICAL" prefHeight="335.0" prefWidth="385.0" vgap="10.0" BorderPane.alignment="CENTER">
                <children>
-                  <TextField prefHeight="31.0" prefWidth="321.0" promptText="Nome">
+                  <TextField fx:id="fieldNome" prefHeight="31.0" prefWidth="321.0" promptText="Nome">
                      <TilePane.margin>
                         <Insets />
                      </TilePane.margin>
                   </TextField>
-                  <TextField prefHeight="31.0" prefWidth="175.0" promptText="CPF" />
-                  <TextField prefHeight="31.0" prefWidth="175.0" promptText="Digite seu Login" />
-                  <PasswordField prefHeight="31.0" prefWidth="104.0" promptText="Digite sua Senha" />
+                  <TextField fx:id="fieldCpf" prefHeight="31.0" prefWidth="175.0" promptText="CPF" />
+                  <TextField fx:id="fieldLogin" prefHeight="31.0" prefWidth="175.0" promptText="Digite seu Login" />
+                  <PasswordField fx:id="fieldSenha" prefHeight="31.0" prefWidth="104.0" promptText="Digite sua Senha" />
                </children>
                <BorderPane.margin>
                   <Insets left="10.0" />
@@ -36,10 +35,10 @@
                   <Insets />
                </BorderPane.margin>
                <children>
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Novo" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Alterar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Excluir" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
-                  <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Cancelar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button fx:id="btnSalvar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSalvar" prefHeight="25.0" prefWidth="104.0" text="Salvar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button fx:id="btnAlterar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onAlterar" prefHeight="25.0" prefWidth="104.0" text="Alterar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button fx:id="btnExcluir" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onDelete" prefHeight="25.0" prefWidth="104.0" text="Excluir" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
+                  <Button fx:id="btnCancelar" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onCancelar" prefHeight="25.0" prefWidth="104.0" text="Cancelar" textAlignment="CENTER" TilePane.alignment="TOP_CENTER" />
                </children>
                <padding>
                   <Insets top="-60.0" />

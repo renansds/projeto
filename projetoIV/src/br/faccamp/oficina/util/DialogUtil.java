@@ -20,4 +20,30 @@ public class DialogUtil {
 			}
 		});
 	}
+
+	public static void mensagemAlerta(String titulo, String mensagem, String criticas) {
+		Alert alert = new Alert(Alert.AlertType.WARNING);
+		ButtonType btnOk = new ButtonType("ok");
+
+		alert.setTitle(titulo);
+		alert.setHeaderText(mensagem);
+		if (criticas.length() > 0)
+			alert.setContentText(criticas);
+		alert.getButtonTypes().setAll(btnOk);
+		alert.showAndWait().ifPresent(b -> {
+			if (b == btnOk) {
+				alert.close();
+			}
+		});
+
+	}
+
+	public static void mensagem(String titulo, String mensagem, String corpo) {
+		Alert alert = new Alert(Alert.AlertType.INFORMATION);
+
+		alert.setTitle(titulo);
+		alert.setHeaderText(mensagem);
+		alert.setContentText(corpo);
+		alert.showAndWait();
+	}
 }

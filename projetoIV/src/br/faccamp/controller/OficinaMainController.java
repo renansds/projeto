@@ -35,7 +35,7 @@ public class OficinaMainController implements Initializable {
 	}
 	@FXML
 	public void onNovoFunc() throws Exception {
-		System.out.println("Novo funcionario");
+		new CadastroLogin().start(new Stage());
 		}
 	
 }
