@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="258.0" prefWidth="349.0" styleClass="pane" stylesheets="@../../../../../../Desktop/ProjetoIV/login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.controller.LoginController">
+<AnchorPane prefHeight="258.0" prefWidth="349.0" styleClass="pane" stylesheets="@login.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.faccamp.controller.LoginController">
    <children>
       <TextField fx:id="txLogin" alignment="CENTER" layoutX="85.0" layoutY="95.0" maxHeight="28.0" maxWidth="180.0" minHeight="28.0" minWidth="180.0" prefHeight="28.0" prefWidth="200.0" promptText="Digite seu login...">
          <font>
