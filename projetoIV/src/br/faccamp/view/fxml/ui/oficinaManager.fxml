@@ -16,7 +16,7 @@
                   <items>
                     <MenuItem mnemonicParsing="false" text="Cliente" />
                         <MenuItem mnemonicParsing="false" text="Veículo" />
-                        <MenuItem mnemonicParsing="false" text="Funcionário" />
+                        <MenuItem mnemonicParsing="false" onAction="#onNovoFunc" text="Funcionário" />
                         <MenuItem mnemonicParsing="false" text="Produto" />
                         <MenuItem mnemonicParsing="false" text="Serviços" />
                   </items>
