@@ -2,6 +2,8 @@ package br.faccamp.controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import br.faccamp.oficina.util.DialogUtil;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
@@ -23,9 +25,7 @@ public class OficinaMainController implements Initializable {
 	}
 
 	public void onSair() {
-		System.out.println("Sair");
+		DialogUtil.mensagemSair("Sair do Sistema", "Tem certeza que deseja sair ?");
 	}
 	
-	
-
 }
