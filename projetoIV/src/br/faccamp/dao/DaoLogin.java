@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 
+import org.hibernate.HibernateException;
 import org.hibernate.exception.ConstraintViolationException;
 
 import br.faccamp.model.Login;
@@ -13,7 +14,7 @@ import br.faccamp.oficina.util.JPAUtil;
 import br.faccamp.view.CadastroLogin;
 import sun.security.jca.GetInstance.Instance;
 
-public class DaoLogin {
+public class DaoLogin implements DaoFactory {
 	EntityManager em = null;
 
 	public boolean loginUser(String nome, String senha) {
@@ -30,8 +31,8 @@ public class DaoLogin {
 		}
 		return false;
 	}
-
-	public boolean loginSalvar(String nome, String cpf, String login, String senha) {
+	@Override
+	public boolean insert(String nome, String cpf, String login, String senha) {
 		if (em == null) {
 			em = new JPAUtil().getEntityManager();
 		}
@@ -48,10 +49,9 @@ public class DaoLogin {
 			em.persist(func);					
 			em.getTransaction().commit();
 		} catch (Exception e) {							
-			e.printStackTrace();
 		    em.getTransaction().rollback();
-		    System.out.println("Erro no banco de dados : " + e.toString());
-		    DialogUtil.mensagem("Erro", e.toString() , e.toString());
+		    System.err.println("Erro no banco de dados : " + e.toString());
+		    DialogUtil.mensagem("Cadastro Funcionário", "Erro ao inserir registro , " + nome + " " , e.toString() +"\n");
 		    return false;
 		} finally {
 			em.close();
@@ -60,5 +60,28 @@ public class DaoLogin {
 		if (em != null)
 			em = null;
 		return true;
+	}
+
+	@Override
+	public boolean delete() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean update() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public boolean save() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+	@Override
+	public boolean insert() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 }

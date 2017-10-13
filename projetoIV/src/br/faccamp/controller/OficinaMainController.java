@@ -31,7 +31,7 @@ public class OficinaMainController implements Initializable {
 	}
 
 	public void onSair() {
-		DialogUtil.mensagemSair("Sair do Sistema", "Tem certeza que deseja sair ?");
+		DialogUtil.mensagemSair("Sair do Sistema", true);
 	}
 	@FXML
 	public void onNovoFunc() throws Exception {

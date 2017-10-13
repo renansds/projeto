@@ -6,7 +6,8 @@ import javafx.scene.control.Alert.AlertType;
 
 public class DialogUtil {
 
-	public static void mensagemSair(String titulo, String mensagem) {
+	public static void mensagemSair(String titulo, boolean exit) {
+		String mensagem = "Tem certeza que deseja sair ?";
 		Alert dialogoExe = new Alert(Alert.AlertType.CONFIRMATION);
 		ButtonType btnSim = new ButtonType("Sim");
 		ButtonType btnNao = new ButtonType("Não");
@@ -15,9 +16,9 @@ public class DialogUtil {
 		dialogoExe.setHeaderText(mensagem);
 		dialogoExe.getButtonTypes().setAll(btnSim, btnNao);
 		dialogoExe.showAndWait().ifPresent(b -> {
-			if (b == btnSim) {
+			if (b == btnSim && exit) {
 				System.exit(0);
-			}
+			} 
 		});
 	}
 
@@ -45,5 +46,23 @@ public class DialogUtil {
 		alert.setHeaderText(mensagem);
 		alert.setContentText(corpo);
 		alert.showAndWait();
+	}
+
+	public static void mensagemConfirmacao(String titulo, String mensagem, String corpo) {
+		Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+		ButtonType btnSim = new ButtonType("Sim"); 
+		ButtonType btnNao = new ButtonType("Não");
+		
+		alert.setTitle(titulo);
+		alert.setHeaderText(mensagem);
+		alert.setContentText(corpo);
+		alert.getButtonTypes().setAll(btnSim, btnNao);
+		
+		alert.showAndWait().ifPresent(b ->{
+			if(b == btnSim)
+				System.out.println("Excluido o funcionario");
+			else
+				alert.close();
+		});
 	}
 }

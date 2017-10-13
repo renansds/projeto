@@ -14,6 +14,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Tooltip;
+import javafx.stage.Stage;
 
 public class CadastroLoginController implements Initializable {
 	@FXML
@@ -54,7 +55,7 @@ public class CadastroLoginController implements Initializable {
 					"Por favor revise os campos digitados e tente novamente ", criticas.toString());
 		} else {
 			DialogUtil.mensagem("Cadastro de Funcionários", "Aguarde, salvando funcionário ", "Conectando ao Banco...");
-			if (new DaoLogin().loginSalvar(fieldNome.getText(), fieldCpf.getText(), fieldLogin.getText(),
+			if (new DaoLogin().insert(fieldNome.getText(), fieldCpf.getText(), fieldLogin.getText(),
 					fieldSenha.getText()))
 				DialogUtil.mensagem("Cadastro de Funcionários", "Salvo", "");
 		}
@@ -85,10 +86,18 @@ public class CadastroLoginController implements Initializable {
 	}
 
 	public void onDelete() {
-
+		DialogUtil.mensagemConfirmacao("Cadastro de Funcionários","Atenção","Você realmente deseja excluir, o " + fieldNome.getText());	
 	}
 
 	public void onCancelar() {
+		limpaTela();
+	}
+
+	private void limpaTela() {
+		fieldCpf.setText("");
+		fieldLogin.setText("");
+		fieldSenha.setText("");
+		fieldNome.setText("");
 	}
 
 	public static void addTextLimiter(final TextField tf, final int maxLength) {
