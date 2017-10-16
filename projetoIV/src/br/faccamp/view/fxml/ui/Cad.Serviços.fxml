@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" layoutX="259.0" layoutY="30.0" prefHeight="44.0" prefWidth="281.0" text="Cadastro de Serviços">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Calibri Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField editable="false" layoutX="22.0" layoutY="88.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Digite a placa" />
+      <Button layoutX="177.0" layoutY="88.0" maxHeight="25.0" maxWidth="67.0" minHeight="25.0" minWidth="54.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" text="Buscar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField editable="false" layoutX="290.0" layoutY="88.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Modelo" />
+      <Pane layoutX="20.0" layoutY="126.0" prefHeight="133.0" prefWidth="759.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="12.0" layoutY="14.0" text="Dados do Serviço:" />
+            <TextField editable="false" layoutX="83.0" layoutY="43.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="CPF do cliente" />
+            <DatePicker layoutX="242.0" layoutY="43.0" prefHeight="25.0" prefWidth="147.0" promptText="dd/mm/yyyy" />
+            <TextField editable="false" layoutX="400.0" layoutY="43.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Hora do serviço" />
+            <TextField editable="false" layoutX="83.0" layoutY="79.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Nome do seriviço" />
+            <TextField editable="false" layoutX="242.0" layoutY="79.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Quantidade do serviço" />
+            <TextField editable="false" layoutX="400.0" layoutY="79.0" maxHeight="25.0" maxWidth="374.0" minHeight="25.0" minWidth="47.0" prefHeight="25.0" prefWidth="147.0" promptText="Valor do serviço" />
+         </children>
+      </Pane>
+      <Button layoutX="581.0" layoutY="528.0" maxHeight="25.0" maxWidth="52.0" minHeight="25.0" minWidth="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Alterar" />
+      <Button layoutX="655.0" layoutY="528.0" maxHeight="25.0" maxWidth="52.0" minHeight="25.0" minWidth="52.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="Salvar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <Button layoutX="724.0" layoutY="528.0" maxHeight="25.0" maxWidth="67.0" minHeight="25.0" minWidth="67.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="67.0" text="Cancelar">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TableView layoutX="22.0" layoutY="275.0" prefHeight="200.0" prefWidth="759.0" style="-fx-border-color: black;">
+        <columns>
+          <TableColumn prefWidth="206.0" text="Cliente" />
+          <TableColumn prefWidth="233.0" text="Serviço" />
+            <TableColumn prefWidth="84.0" text="Quantidade" />
+            <TableColumn prefWidth="129.0" text="Valor" />
+            <TableColumn prefWidth="105.0" text="Total" />
+        </columns>
+      </TableView>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

@@ -19,7 +19,7 @@ public class Login extends Application {
 				stage.setResizable(false);
 				
 				stage.setScene(scene);
-				stage.setTitle("Tela de Login");
+				stage.setTitle("Login");
 				stage.show();
 				
 	}

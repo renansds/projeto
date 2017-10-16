@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="800.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <TilePane hgap="2.0" prefHeight="155.0" prefWidth="780.0" vgap="2.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Dados do Cliente:" />
+                  <Label text="Estado Civil" />
+                  <Label text="Data Nascimento" />
+                  <DatePicker promptText="dd/mm/yyyy" />
+                  <RadioButton mnemonicParsing="false" text="Feminino" />
+                  <RadioButton mnemonicParsing="false" text="Masculino" />
+                  <ComboBox prefWidth="150.0" promptText="Solteiro" />
+                  <TextField prefHeight="29.0" prefWidth="251.0" promptText="seuemail@emaill.com.br" />
+                  <TextField prefHeight="29.0" prefWidth="131.0" promptText="(11)96482-6422" />
+                  <TextField prefHeight="29.0" prefWidth="104.0" promptText="(11)4444-5661" />
+                  <TextField prefHeight="29.0" prefWidth="251.0" promptText="RG / IE" />
+                  <TextField prefHeight="29.0" prefWidth="251.0" promptText="CNPJ / CPF" />
+                  <TextField prefHeight="29.0" prefWidth="251.0" promptText="Sobrenome" />
+                  <TextField prefHeight="29.0" prefWidth="251.0" promptText="Nome" />
+               </children>
+            </TilePane>
+         </top>
+         <center>
+            <TilePane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ComboBox prefHeight="25.0" prefWidth="61.0" promptText="SP" />
+                  <TextField prefHeight="25.0" prefWidth="251.0" promptText="Cidade" />
+                  <TextField prefHeight="25.0" prefWidth="229.0" promptText="Bairro" />
+                  <TextField prefHeight="29.0" prefWidth="91.0" promptText="Complemento" />
+                  <TextField prefHeight="29.0" prefWidth="61.0" promptText="Numero" />
+                  <TextField prefHeight="29.0" prefWidth="351.0" promptText="Rua" />
+                  <Button mnemonicParsing="false" text="Buscar" />
+                  <TextField prefHeight="25.0" prefWidth="168.0" promptText="CEP" />
+                  <Label text="Endereço do Cliente:" />
+               </children>
+            </TilePane>
+         </center>
+         <bottom>
+            <TableView prefHeight="145.0" prefWidth="812.0" style="-fx-border-color: black;" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn prefWidth="199.0" text="Nome" />
+                <TableColumn minWidth="0.0" prefWidth="225.0" text="Sobrenome" />
+                  <TableColumn prefWidth="217.0" text="CNPJ/CPF" />
+                  <TableColumn prefWidth="170.0" text="RG/IE" />
+              </columns>
+            </TableView>
+         </bottom>
+      </BorderPane>
+      <HBox prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <bottom>
+                  <TilePane alignment="BOTTOM_RIGHT" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" text="Cancelar" />
+                        <Button mnemonicParsing="false" text="Alterar" />
+                        <Button mnemonicParsing="false" text="Salvar" />
+                        <Label text="Cadastro de Cliente" />
+                     </children>
+                  </TilePane>
+               </bottom>
+            </BorderPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
